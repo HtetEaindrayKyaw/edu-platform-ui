@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "score": { "type": "number" },
+    "max_score": { "type": "number" },
+    "band": { "type": ["string", "null"] },
+    "summary": { "type": "string" },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "criterion": { "type": "string" },
+          "score": { "type": "number" },
+          "max_score": { "type": "number" },
+          "feedback": { "type": "string" }
+        },
+        "required": ["criterion", "score", "max_score", "feedback"]
+      }
+    },
+    "grammar_corrections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "original": { "type": "string" },
+          "corrected": { "type": "string" },
+          "explanation": { "type": "string" }
+        },
+        "required": ["original", "corrected", "explanation"]
+      }
+    },
+    "strengths": { "type": "array", "items": { "type": "string" } },
+    "next_steps": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["score", "max_score", "band", "summary", "criteria", "grammar_corrections", "strengths", "next_steps"]
+}

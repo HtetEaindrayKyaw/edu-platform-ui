@@ -1,0 +1,6 @@
+# This directory alone may be used as a document root / public API directory.
+Require all granted
+Options -Indexes
+<FilesMatch "(?i)\.(?:sql|log|ini|env|bak)$">
+  Require all denied
+</FilesMatch>

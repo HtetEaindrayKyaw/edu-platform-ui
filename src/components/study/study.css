@@ -1,0 +1,211 @@
+.study-bank {
+  display: grid;
+  gap: 22px;
+}
+
+.study-cycle {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.study-cycle>div {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.study-cycle span {
+  color: var(--accent);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.study-cycle b {
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+.study-cycle small {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.study-curriculum {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+  gap: 20px;
+  align-items: end;
+  padding: 24px;
+}
+
+.study-curriculum h2,
+.study-question-section h2 {
+  color: var(--text-primary);
+  font: 700 1.25rem/1.4 Manrope, sans-serif;
+}
+
+.study-curriculum p,
+.study-question-section .section-head p {
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.study-route-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.study-route-fields label,
+.study-filters label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.study-route-fields select,
+.study-filters select,
+.study-filters input {
+  width: 100%;
+  min-height: 46px;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.study-demo-note {
+  grid-column: 1 / -1;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #faf7fd;
+  color: var(--text-secondary) !important;
+}
+
+.study-question-section {
+  min-width: 0;
+  padding: 24px;
+}
+
+.study-question-section .section-head>span {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.study-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) repeat(3, minmax(130px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.study-question-list {
+  display: grid;
+  gap: 14px;
+}
+
+.study-question {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.study-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.study-question h3 {
+  margin: 12px 0;
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+.study-question ol {
+  display: grid;
+  gap: 7px;
+  padding-left: 28px;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.study-question details {
+  margin-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+.study-question summary {
+  width: fit-content;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.study-question details p {
+  margin-top: 8px;
+}
+
+.study-question .text-button {
+  margin-top: 8px;
+}
+
+.study-empty {
+  padding: 30px 16px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.study-empty h3 {
+  color: var(--text-primary);
+}
+
+.study-empty p {
+  margin-top: 6px;
+}
+
+@media (max-width: 1000px) {
+  .study-cycle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .study-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .study-cycle,
+  .study-curriculum,
+  .study-route-fields,
+  .study-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .study-question-section,
+  .study-curriculum {
+    padding: 18px;
+  }
+}

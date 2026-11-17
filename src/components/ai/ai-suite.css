@@ -1,0 +1,6 @@
+/* Utilities without Preflight preserve the existing student and admin styles. */
+@import "tailwindcss/theme.css";
+@import "./ai-base.css";
+@import "tailwindcss/utilities.css" source(none);
+/* Resolve sources from this stylesheet, independent of the terminal's cwd. */
+@source "./**/*.{jsx,js}";

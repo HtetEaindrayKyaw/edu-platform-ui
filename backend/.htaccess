@@ -1,0 +1,2 @@
+# Fail closed if someone mistakenly uploads the private backend directory under Apache.
+Require all denied

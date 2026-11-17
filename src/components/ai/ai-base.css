@@ -1,0 +1,67 @@
+.ai-suite { min-width: 0; color: #1e293b; font-size: 16px; line-height: 1.65; }
+.ai-suite :where(*) { box-sizing: border-box; border-width: 0; border-style: solid; }
+.ai-suite :where(button, input, textarea, select) { font: inherit; color: inherit; margin: 0; }
+.ai-suite :where(button) { background: transparent; }
+.ai-suite :where(ul, ol) { margin: 0; }
+.ai-suite :where(svg) { flex-shrink: 0; }
+.ai-suite :where(textarea) { resize: vertical; }
+/* Text fields must never fall back to the browser's narrow inline sizing. */
+.ai-suite :where(textarea, select, input:not([type='checkbox']):not([type='range'])) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+.ai-suite :where(textarea, input:not([type='checkbox']):not([type='range']), select) {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.ai-suite :where(label) { vertical-align: top; }
+.ai-suite .ai-two-column { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+.ai-suite .ai-form { display: grid; gap: 20px; }
+.ai-suite .ai-form > * { min-width: 0; }
+@media (min-width: 1280px) { .ai-suite .ai-two-column { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ai-tutor { width: 100%; max-width: 1180px; margin-inline: auto; }
+.ai-tutor .ai-tutor-chat {
+  display: flex;
+  flex-direction: column;
+  height: clamp(660px, calc(100dvh - 310px), 940px);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 24px #0f172a06;
+}
+.ai-tutor .ai-tutor-log { flex: 1 1 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: 24px; }
+.ai-tutor .ai-tutor-content { width: 100%; max-width: 920px; margin-inline: auto; }
+.ai-tutor .ai-tutor-composer { flex-shrink: 0; border-top: 1px solid #e2e8f0; background: #fff; padding: 20px 24px; }
+.ai-tutor .ai-tutor-input-shell { width: 100%; overflow: hidden; border: 1px solid #94a3b8; border-radius: 16px; background: #fff; box-shadow: 0 2px 8px #0f172a05; }
+.ai-tutor .ai-tutor-input-shell:focus-within { border-color: #6d28d9; box-shadow: 0 0 0 3px #ede9fe; }
+.ai-tutor textarea.ai-tutor-input {
+  display: block;
+  width: 100%;
+  min-height: 72px;
+  max-height: 200px;
+  padding: 16px 18px 8px;
+  resize: none;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.ai-tutor .ai-tutor-message { min-width: 0; overflow-wrap: anywhere; }
+.ai-tutor .ai-tutor-message pre { max-width: 100%; white-space: pre; overflow-x: auto; }
+@media (max-width: 640px) {
+  .ai-tutor .ai-tutor-chat { height: 720px; border-radius: 16px; }
+  .ai-tutor .ai-tutor-composer { padding: 16px 12px; }
+}
+.ai-suite :where(input[type='checkbox']) { width: 20px; height: 20px; accent-color: #6d28d9; flex-shrink: 0; }
+@media (prefers-reduced-motion: reduce) { .ai-suite :where(*) { animation: none !important; transition: none !important; } }
